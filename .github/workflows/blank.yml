@@ -26,5 +26,5 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         env:
-          event: ${{ toJSON(github.event) }}
+          event: ${{ toJSON(github.event.assignee.login) }}
         run: echo $event
